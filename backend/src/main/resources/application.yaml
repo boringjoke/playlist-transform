@@ -1,3 +1,28 @@
 spring:
   application:
-    name: backend
+    name: playlist-transform-backend
+  profiles:
+    default: dev
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  cors:
+    allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:}
+
+playlist:
+  parser:
+    rule-version: ${PLAYLIST_PARSER_RULE_VERSION:v1}
+    max-tracks: ${PLAYLIST_MAX_TRACKS:500}
+    max-line-length: ${PLAYLIST_MAX_LINE_LENGTH:1000}
+    max-request-bytes: ${PLAYLIST_MAX_REQUEST_BYTES:262144}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

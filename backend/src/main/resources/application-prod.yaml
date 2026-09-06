@@ -1,0 +1,6 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+# 生产地址、敏感值和跨域来源由部署环境注入，不提供非空默认值。
