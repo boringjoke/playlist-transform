@@ -1,75 +1,39 @@
-# Nuxt Minimal Starter
+# 歌单整理器前端
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+阶段 1 已建立 Nuxt 页面壳、首页视觉基线、基础说明页和后端健康检查联调。
+解析、编辑、草稿、导出和平台兼容能力按项目阶段计划逐步接入。
 
 ## Setup
 
-Make sure to install dependencies:
+安装依赖：
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
+
+本地前后端分开启动时，复制 `.env.example` 为本地 `.env`，并确认
+`NUXT_PUBLIC_API_BASE_URL` 指向后端地址。`.env` 不提交到仓库。
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+启动开发服务器：
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+默认访问 `http://localhost:3000`。如果该地址被其他本地项目占用，可使用项目实际监听地址验证。
 
-Build the application for production:
+## Verification
+
+类型检查：
 
 ```bash
-# npm
+npm run typecheck
+```
+
+生产构建：
+
+```bash
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

@@ -1,6 +1,11 @@
+<script setup lang="ts">
+const { toast } = useToast()
+</script>
+
 <template>
-  <div>
+  <div class="app-root">
     <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <NuxtPage />
+    <AppToast v-if="toast" :message="toast.message" :tone="toast.tone" />
   </div>
 </template>
